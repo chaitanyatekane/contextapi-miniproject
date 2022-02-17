@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import faker from "faker";
+import "./styles.css";
 import SingleProduct from "./SingleProduct";
 
 const Home = () => {
-  const productsArray = [...Array(20)].map(() => ({
+  const productsArray = [...Array(21)].map(() => ({
     id: faker.datatype.uuid(),
     name: faker.commerce.productName(),
     price: faker.commerce.price(),
