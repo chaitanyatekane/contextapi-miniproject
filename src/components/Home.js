@@ -1,8 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import faker from "faker";
 import "./styles.css";
 import SingleProduct from "./SingleProduct";
-import { Cart } from "../Context";
 
 faker.seed(100);
 

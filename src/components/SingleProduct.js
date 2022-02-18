@@ -15,7 +15,7 @@ const SingleProduct = ({ prod }) => {
         <button
           className="add"
           onClick={() => {
-            setCart(cart.filter((c) => c.id != prod.id));
+            setCart(cart.filter((c) => c.id !== prod.id));
           }}
         >
           Remove From Cart
