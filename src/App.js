@@ -1,20 +1,22 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
 
 function App() {
+  const [cart, setCart] = useState([]);
   return (
     <BrowserRouter>
       <Header />
       <div className="App">
         {/* <Switch> */}
         <Route exact path="/">
-          <Home />
+          <Home cart={cart} setCart={setCart} />
         </Route>
         <Route path="/cart">
-          <Cart />
+          <Cart cart={cart} setCart={setCart} />
         </Route>
         {/* </Switch> */}
       </div>
