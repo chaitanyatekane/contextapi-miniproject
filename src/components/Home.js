@@ -5,7 +5,7 @@ import SingleProduct from "./SingleProduct";
 
 faker.seed(100);
 
-const Home = ({}) => {
+const Home = () => {
   const productsArray = [...Array(21)].map(() => ({
     id: faker.datatype.uuid(),
     name: faker.commerce.productName(),
