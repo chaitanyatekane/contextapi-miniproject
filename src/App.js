@@ -3,20 +3,19 @@ import "./App.css";
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import Cart from "./components/Cart";
+import CartPage from "./components/CartPage";
 
 function App() {
-  const [cart, setCart] = useState([]);
   return (
     <BrowserRouter>
       <Header />
       <div className="App">
         {/* <Switch> */}
         <Route exact path="/">
-          <Home cart={cart} setCart={setCart} />
+          <Home />
         </Route>
         <Route path="/cart">
-          <Cart cart={cart} setCart={setCart} />
+          <CartPage />
         </Route>
         {/* </Switch> */}
       </div>
